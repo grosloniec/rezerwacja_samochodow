@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Title</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <a href="{% url 'samochody-list' %}" class="btn btn-primary mb-3">Back</a>
+                <h1 class="display-4 text-center">Samochód Detail</h1>
+                <table class="table table-bordered">
+                    <tbody>
+                        <tr>
+                            <th class="bg-primary text-white">ID:</th>
+                            <td>{{ object.id }}</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-primary text-white">Make:</th>
+                            <td>{{ object.make }}</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-primary text-white">Model:</th>
+                            <td>{{ object.model }}</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-primary text-white">Seats:</th>
+                            <td>{{ object.seats }}</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-primary text-white">Gearbox:</th>
+                            <td>{{ object.gearbox }}</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-primary text-white">Fuel Type:</th>
+                            <td>{{ object.fuel_type }}</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-primary text-white">Active Cruise Control:</th>
+                            <td>{{ object.active_cruise_control }}</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-primary text-white">Body Type:</th>
+                            <td>{{ object.body_type }}</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-primary text-white">Luggage Capacity:</th>
+                            <td>{{ object.luggage_capacity }}</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-primary text-white">Air Conditioning:</th>
+                            <td>{{ object.air_conditioning }}</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-primary text-white">Segment:</th>
+                            <td>{{ object.segment }}</td>
+                        </tr>
+                        <tr>
+                            <th class="bg-primary text-white">Price per Day:</th>
+                            <td>{{ object.price_per_day }} PLN</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a href="{% url 'samochod-confirm-reservation' object.id %}" class="btn btn-success mt-3">Reserve</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
